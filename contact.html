@@ -1,222 +1,266 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Kreeate Global — hire talent, submit your resume, or send a general inquiry.">
+    <meta name="description" content="Contact Kreeate Global — hire elite talent, submit your resume, or send a general inquiry. Partner with India's premium recruitment consultancy.">
+    <meta name="theme-color" content="#f8f9fa" id="theme-color-meta">
+    <title>Contact — Kreeate Global</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Link preview (Open Graph / Twitter) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kreeate Global">
     <meta property="og:title" content="Contact — Kreeate Global">
-    <meta property="og:description" content="Hire talent, submit your resume, or send a general inquiry.">
+    <meta property="og:description" content="Hire elite talent, submit your resume, or send a general inquiry.">
     <meta property="og:url" content="https://sarthaksinghnegi.github.io/KREEATEGLOBAL/contact.html">
     <meta property="og:image" content="https://sarthaksinghnegi.github.io/KREEATEGLOBAL/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact — Kreeate Global">
-    <meta name="twitter:description" content="Hire talent, submit your resume, or send a general inquiry.">
+    <meta name="twitter:description" content="Hire elite talent, submit your resume, or send a general inquiry.">
     <meta name="twitter:image" content="https://sarthaksinghnegi.github.io/KREEATEGLOBAL/assets/og-image.jpg">
 
-    <meta name="theme-color" content="#FFFFFF" id="theme-color-meta">
-    <title>Contact — Kreeate Global</title>
+    <script>(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tw-config.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div id="scroll-progress"></div>
+<body class="font-body-md text-on-surface bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-    <!-- Header -->
-    <header id="site-header">
-        <nav>
-            <a href="index.html" class="logo">🚀 KREEATE GLOBAL</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="why-us.html">Why Us</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()">
-                    <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                    <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-                </button>
-                <a href="contact.html#hire-talent" class="btn-nav btn-nav-primary">Hire Talent</a>
-                <button class="burger" id="burger" aria-label="Open menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mob-menu" id="mob-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="why-us.html">Why Us</a>
-        <a href="process.html">Process</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html#hire-talent" style="color: var(--primary);">Hire Talent</a>
-    </div>
-
-    <!-- Forms Section -->
-    <section id="forms">
-        <div class="section-header">
-            <p class="section-subtitle">Get Started</p>
-            <h2 class="section-title">Connect With Us</h2>
-            <p class="section-description">Whether you're hiring or looking for your next opportunity, we'd love to hear from you.</p>
-        </div>
-        <div class="form-grid">
-            <!-- Hire Talent Form -->
-            <div class="form-card scroll-reveal" id="hire-talent">
-                <h3>Hire Talent</h3>
-                <form action="https://formspree.io/f/mgvenqpd" method="POST">
-                    <div class="form-group">
-                        <label>Company Name *</label>
-                        <input type="text" name="company" required placeholder="Your company name">
-                    </div>
-                    <div class="form-group">
-                        <label>Your Name *</label>
-                        <input type="text" name="name" required placeholder="Full name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Phone *</label>
-                        <input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX">
-                    </div>
-                    <div class="form-group">
-                        <label>Position to Fill *</label>
-                        <input type="text" name="position" required placeholder="e.g., Senior Engineer, Product Manager">
-                    </div>
-                    <div class="form-group">
-                        <label>Hiring Urgency</label>
-                        <select name="urgency">
-                            <option>Immediate (0-30 days)</option>
-                            <option>Soon (30-60 days)</option>
-                            <option>Flexible (60+ days)</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Requirement</button>
-                </form>
-            </div>
-
-            <!-- Submit Resume Form -->
-            <div class="form-card scroll-reveal" id="submit-resume">
-                <h3>Submit Your Resume</h3>
-                <form action="https://formspree.io/f/mgvenqpd" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" name="name" required placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Phone *</label>
-                        <input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX">
-                    </div>
-                    <div class="form-group">
-                        <label>LinkedIn Profile</label>
-                        <input type="url" name="linkedin" placeholder="https://linkedin.com/in/...">
-                    </div>
-                    <div class="form-group">
-                        <label>Current Role</label>
-                        <input type="text" name="current_role" placeholder="Your current position">
-                    </div>
-                    <div class="form-group">
-                        <label>Expected Salary Range</label>
-                        <input type="text" name="salary_range" placeholder="e.g., 8-10 LPA">
-                    </div>
-                    <div class="form-group">
-                        <label>Upload Resume (PDF/DOC) *</label>
-                        <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Application</button>
-                </form>
-            </div>
-
-            <!-- General Contact Form -->
-            <div class="form-card scroll-reveal">
-                <h3>General Inquiry</h3>
-                <form action="https://formspree.io/f/mgvenqpd" method="POST">
-                    <div class="form-group">
-                        <label>Name *</label>
-                        <input type="text" name="name" required placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" name="phone" placeholder="+91 XXXXXXXXXX">
-                    </div>
-                    <div class="form-group">
-                        <label>Message *</label>
-                        <textarea name="message" required placeholder="Tell us how we can help..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Info Message -->
-        <div class="form-info-message scroll-reveal">
-            <p>📧 <strong>All form submissions will be sent to:</strong> business@kreeateglobal.com</p>
-            <p>✅ Your information is secure and will only be used for recruitment purposes.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact-section">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Kreeate Global</h4>
-                <p>We specialize in matching the right job to the perfect candidate. With access to India's top 1% talent and a team of expert acquisition professionals, we build exceptional teams through intelligent matching and proactive partnership.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/kreeate-global/" title="LinkedIn" target="_blank" rel="noopener">in</a>
+    <!-- Navigation -->
+    <nav id="site-nav" class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 border-b border-accent-subtle h-20 flex items-center transition-all duration-300">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex items-center justify-between">
+            <div class="flex items-center gap-12">
+                <a class="font-headline-md text-headline-md font-bold tracking-tight text-primary" href="index.html">Kreeate</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="services.html">Services</a>
+                    <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="process.html">Process</a>
+                    <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="why-us.html">About</a>
+                    <a class="font-body-md text-body-md text-primary font-medium transition-colors" href="contact.html">Contact</a>
                 </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">How It Works</a></li>
-                    <li><a href="why-us.html">About Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html">Talent Matching</a></li>
-                    <li><a href="services.html">Candidate Preparation</a></li>
-                    <li><a href="services.html">End-to-End Solutions</a></li>
-                    <li><a href="contact.html#hire-talent">Hire Talent</a></li>
-                    <li><a href="contact.html#submit-resume">Submit Resume</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Get in Touch</h4>
-                <p><a href="tel:9873833190" style="color: var(--secondary); font-weight: 700;">📞 9873833190</a></p>
-                <p><a href="https://wa.me/919873833190" style="color: var(--success); font-weight: 700;">💬 WhatsApp</a></p>
-                <p><a href="mailto:business@kreeateglobal.com">📧 business@kreeateglobal.com</a></p>
-                <p>📍 India</p>
+            <div class="flex items-center gap-3 md:gap-6">
+                <button data-theme-toggle class="p-2 rounded-full hover:bg-surface-container-high transition-colors cursor-pointer" aria-label="Toggle dark mode">
+                    <span class="material-symbols-outlined text-primary align-middle" data-theme-icon>dark_mode</span>
+                </button>
+                <a class="hidden md:inline-block bg-primary text-on-primary px-6 py-2.5 font-button text-button rounded-lg hover:opacity-90 transition-all" href="#hire-talent">Get in Touch</a>
+                <button data-menu-toggle class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+                    <div class="w-6 h-0.5 bg-primary"></div>
+                    <div class="w-6 h-0.5 bg-primary"></div>
+                </button>
             </div>
         </div>
-        <div class="footer-divider">
-            <p>&copy; 2024 Kreeate Global. All rights reserved. | Strategic Recruitment Excellence</p>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mob-menu" class="mob-menu md:hidden">
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="index.html">Home</a>
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="services.html">Services</a>
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="process.html">Process</a>
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="why-us.html">About</a>
+        <a class="font-display-lg text-3xl font-bold text-primary" href="contact.html">Contact</a>
+        <a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-button text-button" href="#hire-talent">Get in Touch</a>
+    </div>
+
+    <main class="pt-20">
+        <!-- Contact intro + Hire form -->
+        <section class="py-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row gap-16 lg:gap-20">
+                    <div class="md:w-1/2 reveal">
+                        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-6 block">Get Started</span>
+                        <h1 class="font-display-lg text-[40px] leading-[1.05] md:text-[64px] tracking-tight mb-8">Ready to Kreeate your dream team?</h1>
+                        <p class="font-body-lg text-body-lg text-secondary mb-12">Partner with India's premium recruitment consultancy. Let's discuss your hiring goals, global expansion, or leadership search today.</p>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                                <div>
+                                    <h5 class="font-headline-md text-sm font-bold uppercase tracking-wider mb-1">Inquiries</h5>
+                                    <a class="text-secondary hover:text-primary transition-colors" href="mailto:business@kreeateglobal.com">business@kreeateglobal.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary">chat</span>
+                                <div>
+                                    <h5 class="font-headline-md text-sm font-bold uppercase tracking-wider mb-1">WhatsApp / Phone</h5>
+                                    <a class="text-secondary hover:text-primary transition-colors" href="https://wa.me/919873833190" target="_blank" rel="noopener">+91 98738 33190</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                                <div>
+                                    <h5 class="font-headline-md text-sm font-bold uppercase tracking-wider mb-1">Based in</h5>
+                                    <p class="text-secondary">India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hire Talent form -->
+                    <div class="md:w-1/2 bg-surface-container-lowest p-8 md:p-10 border border-accent-subtle rounded-lg reveal" id="hire-talent">
+                        <h2 class="font-headline-md text-headline-md font-bold mb-8">Hire Talent</h2>
+                        <form action="https://formspree.io/f/mgvenqpd" method="POST" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Company Name *</label>
+                                    <input name="company" type="text" required placeholder="Your company" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Your Name *</label>
+                                    <input name="name" type="text" required placeholder="Full name" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Work Email *</label>
+                                    <input name="email" type="email" required placeholder="you@company.com" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Phone *</label>
+                                    <input name="phone" type="tel" required placeholder="+91 XXXXXXXXXX" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">Position to Fill *</label>
+                                <input name="position" type="text" required placeholder="e.g. Senior Engineer, Product Manager" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">Hiring Urgency</label>
+                                <select name="urgency" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                    <option>Immediate (0-30 days)</option>
+                                    <option>Soon (30-60 days)</option>
+                                    <option>Flexible (60+ days)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-on-primary py-4 font-button text-button rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
+                                Submit Requirement
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume + General inquiry -->
+        <section class="pb-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                    <!-- Submit Resume -->
+                    <div class="bg-surface-container-lowest p-8 md:p-10 border border-accent-subtle rounded-lg reveal" id="submit-resume">
+                        <h2 class="font-headline-md text-headline-md font-bold mb-8">Submit Your Resume</h2>
+                        <form action="https://formspree.io/f/mgvenqpd" method="POST" enctype="multipart/form-data" class="space-y-6">
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">Full Name *</label>
+                                <input name="name" type="text" required placeholder="Your name" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Email *</label>
+                                    <input name="email" type="email" required placeholder="you@email.com" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Phone *</label>
+                                    <input name="phone" type="tel" required placeholder="+91 XXXXXXXXXX" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">LinkedIn Profile</label>
+                                <input name="linkedin" type="url" placeholder="https://linkedin.com/in/..." class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">Current Role</label>
+                                <input name="current_role" type="text" placeholder="Your current position" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">Upload Resume (PDF/DOC) *</label>
+                                <input name="resume" type="file" accept=".pdf,.doc,.docx" required class="w-full text-sm text-secondary file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-primary file:text-on-primary file:font-button file:text-button file:cursor-pointer py-2">
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-on-primary py-4 font-button text-button rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
+                                Submit Application
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- General Inquiry -->
+                    <div class="bg-surface-container-lowest p-8 md:p-10 border border-accent-subtle rounded-lg reveal">
+                        <h2 class="font-headline-md text-headline-md font-bold mb-8">General Inquiry</h2>
+                        <form action="https://formspree.io/f/mgvenqpd" method="POST" class="space-y-6">
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">Name *</label>
+                                <input name="name" type="text" required placeholder="Your name" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Email *</label>
+                                    <input name="email" type="email" required placeholder="you@email.com" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase text-secondary">Phone</label>
+                                    <input name="phone" type="tel" placeholder="+91 XXXXXXXXXX" class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase text-secondary">Message *</label>
+                                <textarea name="message" required rows="6" placeholder="Tell us how we can help..." class="w-full border-b border-accent-subtle focus:border-primary focus:ring-0 px-0 py-3 bg-transparent transition-all outline-none resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-on-primary py-4 font-button text-button rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
+                                Send Message
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <p class="font-label-sm text-label-sm text-secondary text-center mt-10">All submissions are sent to business@kreeateglobal.com and used only for recruitment purposes.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full py-section-gap border-t border-accent-subtle">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            <div>
+                <a class="font-headline-md text-headline-md font-bold text-primary mb-6 block" href="index.html">Kreeate</a>
+                <p class="font-body-md text-body-md text-secondary mb-6 max-w-xs">Defining the nexus of talent and technology. Access India's top 1% talent through intelligent matching and proactive partnership.</p>
+                <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="https://www.linkedin.com/company/kreeate-global/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+            <div>
+                <h5 class="font-button text-button text-primary mb-6 uppercase tracking-wider">Navigation</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="services.html">Services</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="process.html">Process</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="why-us.html">About</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-button text-button text-primary mb-6 uppercase tracking-wider">For You</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="contact.html#hire-talent">Hire Talent</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="contact.html#submit-resume">Submit Resume</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="services.html">Our Services</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="process.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-button text-button text-primary mb-6 uppercase tracking-wider">Get in Touch</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="tel:9873833190">+91 98738 33190</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="https://wa.me/919873833190" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="mailto:business@kreeateglobal.com">business@kreeateglobal.com</a></li>
+                    <li class="font-body-md text-body-md text-secondary">India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-accent-subtle">
+            <p class="font-body-md text-body-md text-secondary text-sm">© 2024 Kreeate Global. Strategic Recruitment Excellence.</p>
         </div>
     </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <button class="wa-fab" aria-label="Chat on WhatsApp" onclick="contactViaWhatsApp()">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </button>
 
     <script src="js/script.js"></script>
 </body>

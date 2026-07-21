@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 120" fill="none" role="img" aria-label="Kreeate Global">
+  <!-- mark -->
+  <g>
+    <path d="M30 24 L30 98" stroke="#5A9BFF" stroke-width="18" stroke-linecap="round"/>
+    <path d="M40 62 L92 26" stroke="#5A9BFF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M92 26 L75 27 M92 26 L91 43" stroke="#5A9BFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 62 L86 98" stroke="#FF8355" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <!-- wordmark -->
+  <text x="128" y="62" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="46" letter-spacing="0.5" fill="#FFFFFF">KREEATE</text>
+  <text x="130" y="94" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="21" letter-spacing="9.5" fill="#5A9BFF">GLOBAL</text>
+</svg>

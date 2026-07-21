@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kreeate Global services — talent matching & sourcing, candidate preparation, and end-to-end talent solutions.">
+    <meta name="description" content="Kreeate Global services — talent matching & sourcing, candidate preparation, and end-to-end talent solutions for high-growth tech and product teams.">
+    <meta name="theme-color" content="#f8f9fa" id="theme-color-meta">
+    <title>Services — Kreeate Global</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Link preview (Open Graph / Twitter) -->
     <meta property="og:type" content="website">
@@ -19,269 +22,235 @@
     <meta name="twitter:description" content="Talent matching & sourcing, candidate preparation, and end-to-end talent solutions.">
     <meta name="twitter:image" content="https://sarthaksinghnegi.github.io/KREEATEGLOBAL/assets/og-image.jpg">
 
-    <meta name="theme-color" content="#FFFFFF" id="theme-color-meta">
-    <title>Services — Kreeate Global</title>
+    <script>(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tw-config.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div id="scroll-progress"></div>
+<body class="font-body-md text-on-surface bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-    <!-- Header -->
-    <header id="site-header">
-        <nav>
-            <a href="index.html" class="logo">🚀 KREEATE GLOBAL</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="why-us.html">Why Us</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()">
-                    <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                    <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-                </button>
-                <a href="contact.html#hire-talent" class="btn-nav btn-nav-primary">Hire Talent</a>
-                <button class="burger" id="burger" aria-label="Open menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    <!-- Navigation -->
+    <nav id="site-nav" class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 border-b border-accent-subtle h-20 flex items-center transition-all duration-300">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex items-center justify-between">
+            <div class="flex items-center gap-12">
+                <a class="font-headline-md text-headline-md font-bold tracking-tight text-primary" href="index.html">Kreeate</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="font-body-md text-body-md text-primary font-medium transition-colors" href="services.html">Services</a>
+                    <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="process.html">Process</a>
+                    <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="why-us.html">About</a>
+                    <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="contact.html">Contact</a>
+                </div>
             </div>
-        </nav>
-    </header>
+            <div class="flex items-center gap-3 md:gap-6">
+                <button data-theme-toggle class="p-2 rounded-full hover:bg-surface-container-high transition-colors cursor-pointer" aria-label="Toggle dark mode">
+                    <span class="material-symbols-outlined text-primary align-middle" data-theme-icon>dark_mode</span>
+                </button>
+                <a class="hidden md:inline-block bg-primary text-on-primary px-6 py-2.5 font-button text-button rounded-lg hover:opacity-90 transition-all" href="contact.html#hire-talent">Get in Touch</a>
+                <button data-menu-toggle class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+                    <div class="w-6 h-0.5 bg-primary"></div>
+                    <div class="w-6 h-0.5 bg-primary"></div>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mob-menu" id="mob-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="why-us.html">Why Us</a>
-        <a href="process.html">Process</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html#hire-talent" style="color: var(--primary);">Hire Talent</a>
+    <!-- Mobile menu -->
+    <div id="mob-menu" class="mob-menu md:hidden">
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="index.html">Home</a>
+        <a class="font-display-lg text-3xl font-bold text-primary" href="services.html">Services</a>
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="process.html">Process</a>
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="why-us.html">About</a>
+        <a class="font-display-lg text-3xl font-bold text-secondary" href="contact.html">Contact</a>
+        <a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-button text-button" href="contact.html#hire-talent">Get in Touch</a>
     </div>
 
-    <!-- Services -->
-    <section id="services">
-        <div class="section-header">
-            <p class="section-subtitle">Our Approach</p>
-            <h2 class="section-title">Beyond Recruitment</h2>
-            <p class="section-description">We don't just find candidates. We build talent strategies that drive real conversions and long-term team success.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card scroll-reveal" onclick="openModal('leadershipModal')">
-                <div class="service-number">01</div>
-                <div class="service-icon">🎯</div>
-                <h3>Talent Matching &amp; Sourcing</h3>
-                <p>Access to India's top 1% talent pool through our proprietary database spanning LinkedIn, Instahyre, Naukri, and elite IIT/IIM/NIT alumni networks. We match the right candidate to the perfect role, every time.</p>
-                <a href="javascript:void(0)" class="service-link">Learn More →</a>
+    <main class="pt-20">
+        <!-- Page hero -->
+        <section class="py-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop reveal">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-6 block">Our Services</span>
+                <h1 class="font-display-lg text-[40px] leading-[1.05] md:text-[72px] tracking-tight mb-8 max-w-4xl">Beyond recruitment. Strategic talent partnership.</h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl">We don't just find candidates — we build talent strategies that drive real conversions and long-term team success across high-growth tech and product ecosystems.</p>
             </div>
-            <div class="service-card scroll-reveal" onclick="openModal('midseniorModal')">
-                <div class="service-number">02</div>
-                <div class="service-icon">📈</div>
-                <h3>Candidate Preparation &amp; Conversion</h3>
-                <p>We don't stop at sourcing. We help candidates build the right perspective for your requirements, conduct comprehensive prep sessions, and guide them through the entire journey—increasing conversion rates significantly.</p>
-                <a href="javascript:void(0)" class="service-link">Learn More →</a>
-            </div>
-            <div class="service-card scroll-reveal" onclick="openModal('volumeModal')">
-                <div class="service-number">03</div>
-                <div class="service-icon">🚀</div>
-                <h3>End-to-End Talent Solutions</h3>
-                <p>Talent insights, mapping, post-sourcing support, interview scheduling, candidate prep, and post-offer engagement. We own the entire journey with proactive weekly updates and best-in-industry SLAs.</p>
-                <a href="javascript:void(0)" class="service-link">Learn More →</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Domain Expertise -->
-    <section>
-        <div class="section-header">
-            <p class="section-subtitle">Specialized Expertise</p>
-            <h2 class="section-title">Where Our Top 1% Talent Comes From</h2>
-            <p class="section-description">We source from the best tech companies, startups, and elite institutions to find your next exceptional hire.</p>
-        </div>
-        <div class="domains-grid">
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">🌟</div><h5>FAANG Engineers</h5></div>
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">🚀</div><h5>Unicorn Talent</h5></div>
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">🎯</div><h5>Product Leaders</h5></div>
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">💻</div><h5>AI/ML Specialists</h5></div>
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">🔧</div><h5>Full Stack Engineers</h5></div>
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">🏆</div><h5>IIT/IIM Alumni</h5></div>
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">☁️</div><h5>DevOps &amp; Cloud</h5></div>
-            <div class="domain-tile scroll-reveal"><div class="domain-icon">🌍</div><h5>GCC Professionals</h5></div>
-        </div>
-
-        <div style="margin-top: 4rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%); border-radius: 16px; border: 2px solid rgba(0, 102, 255, 0.1);">
-            <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--text-dark); text-align: center;">Our Talent Network Spans</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="text-align: center;">
-                    <p style="font-size: 1.5rem; font-weight: 900; color: var(--primary); margin-bottom: 0.5rem;">FAANG</p>
-                    <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.8;">Meta, Apple, Amazon, Netflix talent who've built world-class products at global scale</p>
-                </div>
-                <div style="text-align: center;">
-                    <p style="font-size: 1.5rem; font-weight: 900; color: var(--secondary); margin-bottom: 0.5rem;">Top Startups</p>
-                    <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.8;">Engineers from Razorpay, Flipkart, Swiggy, and other unicorn/startup ecosystems</p>
-                </div>
-                <div style="text-align: center;">
-                    <p style="font-size: 1.5rem; font-weight: 900; color: var(--primary); margin-bottom: 0.5rem;">Elite Alumni</p>
-                    <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.8;">IIT, IIM, NIT, IIIT, BITS graduates building the future of Indian tech</p>
+        <!-- Service cards -->
+        <section class="pb-section-gap" id="services">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal">
+                    <div class="bg-surface-container-lowest p-10 border border-accent-subtle rounded-lg group hover:border-primary transition-all">
+                        <span class="font-label-sm text-label-sm text-primary/40 block mb-6">01</span>
+                        <span class="material-symbols-outlined text-4xl mb-8 block text-primary group-hover:scale-110 transition-transform">search_insights</span>
+                        <h3 class="font-headline-md text-headline-md font-bold mb-4">Talent Matching &amp; Sourcing</h3>
+                        <p class="font-body-md text-body-md text-secondary mb-8">Access to India's top 1% talent pool through our proprietary database spanning LinkedIn, Instahyre, Naukri, and elite IIT / IIM / NIT alumni networks. We match the right candidate to the perfect role — every time.</p>
+                        <ul class="space-y-3 font-label-sm text-label-sm text-secondary">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> FAANG &amp; Unicorn Talent</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Elite Alumni Networks</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Intelligent Matching</li>
+                        </ul>
+                    </div>
+                    <div class="bg-surface-container-lowest p-10 border border-accent-subtle rounded-lg group hover:border-primary transition-all">
+                        <span class="font-label-sm text-label-sm text-primary/40 block mb-6">02</span>
+                        <span class="material-symbols-outlined text-4xl mb-8 block text-primary group-hover:scale-110 transition-transform">psychology</span>
+                        <h3 class="font-headline-md text-headline-md font-bold mb-4">Candidate Preparation &amp; Conversion</h3>
+                        <p class="font-body-md text-body-md text-secondary mb-8">We don't stop at sourcing. We help candidates build the right perspective for your requirements, conduct comprehensive prep sessions, and guide them through the entire journey — increasing conversion rates significantly.</p>
+                        <ul class="space-y-3 font-label-sm text-label-sm text-secondary">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Mock Interviews</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Perspective Building</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Culture &amp; Fit Alignment</li>
+                        </ul>
+                    </div>
+                    <div class="bg-surface-container-lowest p-10 border border-accent-subtle rounded-lg group hover:border-primary transition-all">
+                        <span class="font-label-sm text-label-sm text-primary/40 block mb-6">03</span>
+                        <span class="material-symbols-outlined text-4xl mb-8 block text-primary group-hover:scale-110 transition-transform">hub</span>
+                        <h3 class="font-headline-md text-headline-md font-bold mb-4">End-to-End Talent Solutions</h3>
+                        <p class="font-body-md text-body-md text-secondary mb-8">Talent insights, mapping, post-sourcing support, interview scheduling, candidate prep, and post-offer engagement. We own the entire journey with proactive weekly updates and best-in-industry SLAs.</p>
+                        <ul class="space-y-3 font-label-sm text-label-sm text-secondary">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Interview Coordination</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Weekly Progress Updates</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> 90-Day Onboarding Support</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- For Employers & Candidates -->
-    <section>
-        <div class="section-header">
-            <p class="section-subtitle">Who We Serve</p>
-            <h2 class="section-title">For Tech &amp; Product Companies</h2>
-        </div>
-        <div class="dual-section">
-            <div class="dual-card employers on-light scroll-reveal">
-                <h3>For Employers</h3>
-                <p style="margin-bottom: 1.5rem;">We solve your toughest hiring challenges—finding exceptional talent that actually fits.</p>
-                <ul>
-                    <li>Access to top 1% talent pool across tech &amp; product</li>
-                    <li>Expert matching, not just sourcing</li>
-                    <li>Higher conversion rates through candidate prep</li>
-                    <li>Proactive weekly updates &amp; support</li>
-                    <li>Post-offer engagement &amp; integration support</li>
-                </ul>
-                <a class="btn btn-primary" href="contact.html#hire-talent">Start Hiring Today</a>
+        <!-- Domain expertise -->
+        <section class="py-section-gap bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="mb-16 reveal">
+                    <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-4 block">Specialized Expertise</span>
+                    <h2 class="font-headline-lg text-[32px] leading-[40px] md:text-headline-lg mb-4">Where our top 1% talent comes from</h2>
+                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">We source from the best tech companies, startups, and elite institutions to find your next exceptional hire.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter reveal">
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">stars</span>
+                        <h5 class="font-headline-md text-lg font-bold">FAANG Engineers</h5>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">rocket_launch</span>
+                        <h5 class="font-headline-md text-lg font-bold">Unicorn Talent</h5>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">target</span>
+                        <h5 class="font-headline-md text-lg font-bold">Product Leaders</h5>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">smart_toy</span>
+                        <h5 class="font-headline-md text-lg font-bold">AI / ML Specialists</h5>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">code</span>
+                        <h5 class="font-headline-md text-lg font-bold">Full Stack Engineers</h5>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">school</span>
+                        <h5 class="font-headline-md text-lg font-bold">IIT / IIM Alumni</h5>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">cloud</span>
+                        <h5 class="font-headline-md text-lg font-bold">DevOps &amp; Cloud</h5>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 border border-accent-subtle rounded-lg">
+                        <span class="material-symbols-outlined text-3xl mb-4 block text-primary">public</span>
+                        <h5 class="font-headline-md text-lg font-bold">GCC Professionals</h5>
+                    </div>
+                </div>
             </div>
-            <div class="dual-card candidates on-light scroll-reveal">
-                <h3>For Candidates</h3>
-                <p style="margin-bottom: 1.5rem;">We believe in matching careers, not just placing resumes.</p>
-                <ul>
-                    <li>Opportunities with India's best tech &amp; product companies</li>
-                    <li>Expert guidance &amp; interview preparation</li>
-                    <li>Real perspective on role &amp; team culture</li>
-                    <li>Confidential, zero-pressure process</li>
-                    <li>Career growth &amp; long-term success focused</li>
-                </ul>
-                <a class="btn btn-primary" href="contact.html#submit-resume">Submit Your Profile</a>
+        </section>
+
+        <!-- Employers & Candidates -->
+        <section class="py-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter reveal">
+                    <div class="bg-surface-container-lowest p-12 border border-accent-subtle rounded-lg">
+                        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-4 block">For Employers</span>
+                        <h3 class="font-headline-md text-headline-md font-bold mb-6">We solve your toughest hiring challenges</h3>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Access to top 1% talent across tech &amp; product</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Expert matching, not just sourcing</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Higher conversion through candidate prep</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Proactive weekly updates &amp; support</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Post-offer engagement &amp; integration</li>
+                        </ul>
+                        <a class="inline-block bg-primary text-on-primary px-8 py-4 font-button text-button rounded-lg hover:opacity-90 transition-all" href="contact.html#hire-talent">Start Hiring Today</a>
+                    </div>
+                    <div class="bg-surface-container-lowest p-12 border border-accent-subtle rounded-lg">
+                        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-4 block">For Candidates</span>
+                        <h3 class="font-headline-md text-headline-md font-bold mb-6">We match careers, not just resumes</h3>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Opportunities with India's best companies</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Expert guidance &amp; interview preparation</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Real perspective on role &amp; team culture</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Confidential, zero-pressure process</li>
+                            <li class="flex items-start gap-3 font-body-md text-body-md text-secondary"><span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span> Long-term career growth focused</li>
+                        </ul>
+                        <a class="inline-block border border-primary text-primary px-8 py-4 font-button text-button rounded-lg hover:bg-surface-container-low transition-all" href="contact.html#submit-resume">Submit Your Profile</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- CTA -->
+        <section class="pb-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="bg-primary text-on-primary rounded-xl p-12 md:p-20 text-center reveal">
+                    <h2 class="font-headline-lg text-[32px] leading-[40px] md:text-headline-lg mb-6">Let's find your perfect match.</h2>
+                    <p class="font-body-lg text-body-lg opacity-80 max-w-2xl mx-auto mb-12">Whether you're scaling a team or hiring your next leader — we've got the network, expertise, and process.</p>
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6">
+                        <a class="w-full sm:w-auto text-center bg-on-primary text-primary px-8 py-4 font-button text-button rounded-lg hover:opacity-90 transition-all" href="contact.html#hire-talent">Hire Elite Talent</a>
+                        <button class="w-full sm:w-auto text-center border border-on-primary/40 text-on-primary px-8 py-4 font-button text-button rounded-lg hover:bg-on-primary/10 transition-all" onclick="contactViaWhatsApp()">Chat on WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer id="contact-section">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Kreeate Global</h4>
-                <p>We specialize in matching the right job to the perfect candidate. With access to India's top 1% talent and a team of expert acquisition professionals, we build exceptional teams through intelligent matching and proactive partnership.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/kreeate-global/" title="LinkedIn" target="_blank" rel="noopener">in</a>
-                </div>
+    <footer class="bg-surface-container-lowest w-full py-section-gap border-t border-accent-subtle">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            <div>
+                <a class="font-headline-md text-headline-md font-bold text-primary mb-6 block" href="index.html">Kreeate</a>
+                <p class="font-body-md text-body-md text-secondary mb-6 max-w-xs">Defining the nexus of talent and technology. Access India's top 1% talent through intelligent matching and proactive partnership.</p>
+                <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="https://www.linkedin.com/company/kreeate-global/" target="_blank" rel="noopener">LinkedIn ↗</a>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">How It Works</a></li>
-                    <li><a href="why-us.html">About Us</a></li>
+            <div>
+                <h5 class="font-button text-button text-primary mb-6 uppercase tracking-wider">Navigation</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="services.html">Services</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="process.html">Process</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="why-us.html">About</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html">Talent Matching</a></li>
-                    <li><a href="services.html">Candidate Preparation</a></li>
-                    <li><a href="services.html">End-to-End Solutions</a></li>
-                    <li><a href="contact.html#hire-talent">Hire Talent</a></li>
-                    <li><a href="contact.html#submit-resume">Submit Resume</a></li>
+            <div>
+                <h5 class="font-button text-button text-primary mb-6 uppercase tracking-wider">For You</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="contact.html#hire-talent">Hire Talent</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="contact.html#submit-resume">Submit Resume</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="services.html">Our Services</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="process.html">How It Works</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Get in Touch</h4>
-                <p><a href="tel:9873833190" style="color: var(--secondary); font-weight: 700;">📞 9873833190</a></p>
-                <p><a href="https://wa.me/919873833190" style="color: var(--success); font-weight: 700;">💬 WhatsApp</a></p>
-                <p><a href="mailto:business@kreeateglobal.com">📧 business@kreeateglobal.com</a></p>
-                <p>📍 India</p>
+            <div>
+                <h5 class="font-button text-button text-primary mb-6 uppercase tracking-wider">Get in Touch</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="tel:9873833190">+91 98738 33190</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="https://wa.me/919873833190" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="mailto:business@kreeateglobal.com">business@kreeateglobal.com</a></li>
+                    <li class="font-body-md text-body-md text-secondary">India</li>
+                </ul>
             </div>
         </div>
-        <div class="footer-divider">
-            <p>&copy; 2024 Kreeate Global. All rights reserved. | Strategic Recruitment Excellence</p>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-accent-subtle">
+            <p class="font-body-md text-body-md text-secondary text-sm">© 2024 Kreeate Global. Strategic Recruitment Excellence.</p>
         </div>
     </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <button class="wa-fab" aria-label="Chat on WhatsApp" onclick="contactViaWhatsApp()">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </button>
-
-    <!-- Modals -->
-    <div id="leadershipModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('leadershipModal')">&times;</span>
-            <h2>Talent Matching &amp; Sourcing</h2>
-            <p>We tap into India's top 1% talent pool from FAANG companies, unicorn startups, and product-led organizations. Every candidate is intelligently matched to your exact requirements.</p>
-            <h3>How We Source</h3>
-            <ul>
-                <li>Direct relationships with FAANG talent (Meta, Apple, Amazon, Netflix)</li>
-                <li>Elite alumni networks from IITs, IIMs, NITs, IIIT, BITS</li>
-                <li>Proprietary database from LinkedIn, Instahyre, Naukri</li>
-                <li>Connections with top Indian startups and unicorns</li>
-                <li>Specialized access to GCC center professionals</li>
-            </ul>
-            <h3>What We Deliver</h3>
-            <ul>
-                <li>Intelligent matching, not just resume sourcing</li>
-                <li>Vetted, qualified candidates aligned with your needs</li>
-                <li>Detailed candidate profiles and assessments</li>
-                <li>Proactive sourcing for hard-to-fill roles</li>
-                <li>Access to passive talent from top companies</li>
-            </ul>
-            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="contactViaWhatsApp()">Talk to Our Team</button>
-        </div>
-    </div>
-
-    <div id="midseniorModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('midseniorModal')">&times;</span>
-            <h2>Candidate Preparation &amp; Conversion</h2>
-            <p>We don't just source candidates—we prepare them. We help candidates build the right perspective for your requirements, conduct interview prep, and guide them to success. This drives higher conversion rates.</p>
-            <h3>Our Approach</h3>
-            <ul>
-                <li>Deep requirement understanding with your team</li>
-                <li>Share detailed role context with candidates</li>
-                <li>Mock interviews and technical preparation</li>
-                <li>Culture and team fit assessment</li>
-            </ul>
-            <h3>Impact</h3>
-            <ul>
-                <li>Significantly higher acceptance rates</li>
-                <li>Better cultural alignment from day one</li>
-                <li>Candidates who are truly excited about the role</li>
-                <li>Lower attrition through better matching</li>
-            </ul>
-            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="contactViaWhatsApp()">Schedule a Consultation</button>
-        </div>
-    </div>
-
-    <div id="volumeModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('volumeModal')">&times;</span>
-            <h2>End-to-End Talent Solutions</h2>
-            <p>Beyond sourcing. We provide comprehensive support through every stage—talent mapping, interview coordination, candidate prep, offer negotiation, and 90-day onboarding support.</p>
-            <h3>Services Included</h3>
-            <ul>
-                <li>Talent insights and market benchmarking</li>
-                <li>Strategic talent mapping for your needs</li>
-                <li>Interview scheduling and coordination</li>
-                <li>Candidate preparation and mock interviews</li>
-                <li>Post-offer engagement and onboarding support</li>
-                <li>Weekly proactive updates and communication</li>
-            </ul>
-            <h3>Why This Matters</h3>
-            <ul>
-                <li>Best-in-industry service SLAs</li>
-                <li>You're never in the dark about progress</li>
-                <li>Highest success rates in the industry</li>
-                <li>Long-term partnership approach</li>
-            </ul>
-            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="contactViaWhatsApp()">Start Building Your Team</button>
-        </div>
-    </div>
 
     <script src="js/script.js"></script>
 </body>
