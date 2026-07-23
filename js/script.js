@@ -1,5 +1,5 @@
 /* ============================================================
-   Kreeate Global — shared interactions
+   Kreeate Global - shared interactions
    ============================================================ */
 
 const WHATSAPP_NUMBER = "919873833190";

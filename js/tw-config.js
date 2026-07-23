@@ -1,4 +1,4 @@
-// Shared Tailwind (Play CDN) config for Kreeate Global — "Nexus Elite" design system.
+// Shared Tailwind (Play CDN) config for Kreeate Global - "Nexus Elite" design system.
 // Colors reference CSS variables (defined in css/styles.css) so light/dark works globally.
 tailwind.config = {
   darkMode: "class",
